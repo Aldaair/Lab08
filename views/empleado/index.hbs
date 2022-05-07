@@ -1,0 +1,39 @@
+<h1>{{title}}</h1>
+
+<h1 style="text-align: center;"> Empleados</h1>
+    <p >
+        <div class="container">
+            <h4><a href="/empleados/create">Crear Empleado</a></h4>
+            <h2 id='title'>Lista de Empleados</h2>
+            {{#if empleados }}
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            <th>DNI</th>
+                            <th>Cargo</th>
+                            <th>Sueldo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{# each empleados }}
+                        <tr>
+                            <td><a href="/empleados/show/{{ _id }}">{{ nombre }}</a></td>
+                            <td>{{ apellido }}</td>
+                            <td>{{ edad }}</td>
+                            <td>{{ dni }}</td>
+                            <td>{{ cargo }}</td>
+                            <td>{{ sueldo }}</td>
+                          
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{~^~}}
+                <div>Empleados no encontrados.</div>
+            {{/if}}
+        </div>
+    </p>
+

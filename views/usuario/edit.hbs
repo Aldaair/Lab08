@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editar Usuario</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/usuarios">Lista de Usuarios</a></h3>
+            <h1>Editar Usuario</h1>
+            <form action="/usuarios/update/{{ usuario._id }}" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" name="nombre" value="{{ usuario.nombre }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Apellido</td>
+                            <td><input type="text" name="apellido" value="{{ usuario.apellido }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type="text" name="email" value="{{ usuario.email }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Estado</td>
+                            <td><input type="text" name="estado" value="{{ usuario.estado }}" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">Update</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

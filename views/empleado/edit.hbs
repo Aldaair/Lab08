@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editar Empleado</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/empleados">Lista de Empleados</a></h3>
+            <h1>Editar Empleado</h1>
+            <form action="/empleados/update/{{ empleado._id }}" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" name="nombre" value="{{ empleado.nombre }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Apellido</td>
+                            <td><input type="text" name="apellido" value="{{ empleado.apellido }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>edad</td>
+                            <td><input type="text" name="edad" value="{{ empleado.edad }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>dni</td>
+                            <td><input type="text" name="dni" value="{{ empleado.dni }}" /></td>
+                        </tr>
+                         <tr>
+                            <td>cargo</td>
+                            <td><input type="text" name="cargo" value="{{ empleado.cargo }}" /></td>
+                        </tr>
+                        <tr>
+                            <td>sueldo</td>
+                            <td><input type="text" name="sueldo" value="{{ empleado.sueldo }}" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="submit">Update</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

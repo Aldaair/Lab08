@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crear Producto</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/productos">Lista de Productos</a></h3>
+            <h1>Crear Nuevo Producto</h1>
+            <form action="/productos/save" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" name="nombre" /></td>
+                        </tr>
+                        <tr>
+                            <td>Código</td>
+                            <td><input type="text" name="codigo" /></td>
+                        </tr>
+                        <tr>
+                            <td>Stock</td>
+                            <td><input type="text" name="stock" /></td>
+                        </tr>
+                        <tr>
+                            <td>Precio</td>
+                            <td><input type="text" name="precio" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Grabar" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
